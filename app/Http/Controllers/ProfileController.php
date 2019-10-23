@@ -15,7 +15,8 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        //
+        $profiles= Profile::All();
+        return view('welcome')->with(['profiles'=>$profiles]);
     }
 
     /**
